@@ -2,11 +2,45 @@ package calc;
 
 public class MathEquation {
 
-		public double leftVal;
-		public double rightVal;
-		public char opCode;
-		public double result;
+		private double leftVal;
+		private double rightVal;
+		private char opCode;
+		private double result;
 		
+		
+		
+		public double getLeftVal() {
+			return leftVal;
+		}
+
+		public double getRightVal() {
+			return rightVal;
+		}
+
+		public char getOpCode() {
+			return opCode;
+		}
+
+		public double getResult() {
+			return result;
+		}
+
+		public void setLeftVal(double leftVal) {
+			this.leftVal = leftVal;
+		}
+
+		public void setRightVal(double rightVal) {
+			this.rightVal = rightVal;
+		}
+
+		public void setOpCode(char opCode) {
+			this.opCode = opCode;
+		}
+
+		public void setResult(double result) {
+			this.result = result;
+		}
+
 		public MathEquation() {
 			// TODO Auto-generated constructor stub
 		}
@@ -18,7 +52,7 @@ public class MathEquation {
 			this.opCode=opCode;
 		}
 		
-		
+	
 
 		public void execute()
 		{
@@ -34,7 +68,7 @@ public class MathEquation {
 				result=leftVal*rightVal;
 				break;
 			case 'd':
-				result=rightVal!=0.0f ? leftVal/rightVal : 0.0f;
+				result = (rightVal!=0.0f ? leftVal/rightVal : 0.0f);
 				break;
 			default:
 				System.out.println("error");
